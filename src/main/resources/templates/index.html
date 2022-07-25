@@ -42,8 +42,12 @@
       						<td th:text="${persona.nombre}"></td>
       						<td th:text="${persona.apellidoPaterno}"></td>
       						<td th:text="${persona.apellidoMaterno}"></td>
-      						<td><a th:href="@{'/editarPersona/' + ${persona.idPersona}}" class="btn btn-warning">Editar</a></td>
-      						<td><a class="btn btn-danger">Eliminars</a></td>
+      						<td>
+      							<a th:href="@{'/editarPersona/' + ${persona.idPersona}}" 
+      							class="btn btn-warning">Editar</a>
+      							<a th:href="@{'/eliminarPersona/' + ${persona.idPersona}}" 
+      							class="btn btn-danger">Eliminar</a>
+      						</td>
     					</tr>
   					</tbody>
 				</table>

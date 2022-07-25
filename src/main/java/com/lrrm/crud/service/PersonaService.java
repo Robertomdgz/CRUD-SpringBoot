@@ -23,8 +23,8 @@ public class PersonaService{
 		return repository.readOne(id).toBean();
 	}
 
-	public void delete(Persona persona) {
-		repository.delete(persona);
+	public void delete(int id) {
+		repository.delete(id);
 	}
 
 	public void create(Persona persona) {

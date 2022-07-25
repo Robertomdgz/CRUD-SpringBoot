@@ -32,8 +32,8 @@ public class PersonaRepository implements CRUD<Persona>{
 	}
 
 	@Override
-	public void delete(Persona persona) {
-		sql = "DELETE FROM PERSONA WHERE idPersona='" + persona.getIdPersona() +"'";
+	public void delete(Integer id) {
+		sql = "DELETE FROM PERSONA WHERE idPersona='" + id +"'";
 		template.update(sql);
 	}
 

@@ -49,5 +49,10 @@ public class PersonaController {
 		return "redirect:/listar";
 	}
 	
-
+	@GetMapping("/eliminarPersona/{id}")
+	public String delete(@PathVariable int id) {
+		service.delete(id);
+		return "redirect:/listar";
+	}
+	
 }
