@@ -1,4 +1,4 @@
-package com.lrrm.crud;
+package com.lrrm.crud.main;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
