@@ -1,4 +1,4 @@
-package com.lrrm.crud.main;
+package com.lrrm.crud;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

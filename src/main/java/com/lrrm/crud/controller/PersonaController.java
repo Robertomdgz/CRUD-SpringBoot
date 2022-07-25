@@ -16,7 +16,7 @@ public class PersonaController {
 	@Autowired
 	private PersonaService service;
 	
-	@GetMapping({"/","/listar"})
+	@GetMapping({"/","/listar","/persona/listar"})
 	public String showAll(Model model) {
 		model.addAttribute("personas", service.readAll());
 		return "index";
