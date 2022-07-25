@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.lrrm.crud.commons.CRUD;
 import com.lrrm.crud.model.Persona;
 import com.lrrm.crud.model.PersonaBean;
 import com.lrrm.crud.model.DAO.PersonaRepository;
@@ -27,7 +26,9 @@ public class PersonaService{
 		repository.delete(id);
 	}
 
-	public void create(Persona persona) {
+	public void create(PersonaBean personaBean) {
+		Persona persona = new Persona();
+		persona.assamble(personaBean);
 		repository.create(persona);
 	}
 

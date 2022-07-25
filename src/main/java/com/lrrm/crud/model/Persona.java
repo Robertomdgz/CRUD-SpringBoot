@@ -13,14 +13,19 @@ public class Persona {
 	private String apellidoPaterno;
 	private String apellidoMaterno;
 	public void assamble(PersonaBean personaBean) {
-		this.idPersona = Integer.parseInt(personaBean.getIdPersona());
+		if(personaBean.getIdPersona() != null 
+				&& !personaBean.getIdPersona().isEmpty()) {
+			this.idPersona = Integer.parseInt(personaBean.getIdPersona());
+		}
 		this.nombre = personaBean.getNombre();
 		this.apellidoMaterno = personaBean.getApellidoMaterno();
 		this.apellidoPaterno = personaBean.getApellidoPaterno();
 	}
 	public PersonaBean toBean() {
 		PersonaBean personaBean = new PersonaBean();
-		personaBean.setIdPersona(String.valueOf(this.idPersona));
+		if(this.idPersona != null) {
+			personaBean.setIdPersona(String.valueOf(this.idPersona));
+		}
 		personaBean.setNombre(this.nombre);
 		personaBean.setApellidoPaterno(this.apellidoPaterno);
 		personaBean.setApellidoMaterno(this.apellidoMaterno);

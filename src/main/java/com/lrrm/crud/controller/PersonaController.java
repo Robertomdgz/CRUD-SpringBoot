@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import com.lrrm.crud.model.Persona;
 import com.lrrm.crud.model.PersonaBean;
 import com.lrrm.crud.service.PersonaService;
 
@@ -25,13 +24,13 @@ public class PersonaController {
 	
 	@GetMapping("/registrarPersona")
 	public String showCreateView(Model model) {
-		Persona persona = new Persona();
+		PersonaBean persona = new PersonaBean();
 		model.addAttribute("persona", persona);
 		return "crear_persona";
 	}
 	
 	@PostMapping("/persona")
-	public String create(@Validated Persona persona) {
+	public String create(@Validated PersonaBean persona) {
 		service.create(persona);
 		return "redirect:/listar";
 	}
